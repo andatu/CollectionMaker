@@ -1,0 +1,654 @@
+body {
+  background-color: #eee;
+}
+.button {
+  background-color: #c4ff33;
+  border-bottom: 2px solid black;
+  border-right: 2px solid black;
+  color: black;
+  padding: 4px 15px;
+  margin-right: 5px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 11px;
+}
+
+.Navbar {
+  height: min-content;
+  grid-template-rows: auto;
+  display: grid;
+  grid-template-areas:
+    "bar bar"
+    "ch ch";
+}
+
+
+#cart {
+  float: right;
+  margin: 0;
+  margin-right: 0.5em;
+  
+
+}
+.cartHolder{ grid-area:ch;}
+.Navbar-header {
+  background-color: black;
+  color: #c4ff33;
+  font-size: 30px;
+  margin: auto;
+  height: min-content;
+  grid-area: bar;
+  width: 100%;
+}
+
+#navbarAlign {
+  margin-right: 5px;
+  float: left;
+ 
+}
+
+#sInput {
+  margin-right: 1em;
+  width: 30%;
+  padding: 0.5em 1em;
+}
+
+#itemOrCol {
+  background-color: #c4ff33;
+  cursor: pointer;
+}
+
+
+
+#goToDetails {
+  cursor: pointer;
+}
+
+
+@media screen and (max-width: 660px) {
+  #itemOrCol {
+    display: block;
+    margin: 0 auto;
+    width: 25%;
+    text-align-last: center;
+    margin-top: 1em;
+    padding: 0.2em;
+  }
+ 
+  #cartHolder {
+    text-align: center;
+    grid-area: ch;
+  }
+
+  #cart {
+    width: 100%;
+    margin: auto;
+    background-color: #c4ff33;
+    margin-top: 0.2em;
+    
+  }
+}
+
+.one {
+  float: left;
+  color: #c4ff33;
+  background-color: black;
+}
+.two {
+  float: right;
+  color: #c4ff33;
+  background-color: black;
+}
+.left {
+  grid-area: sr;
+}
+.right {
+  grid-area: log;
+}
+#toggle {
+  display: none;
+}
+.right {
+  grid-area: log;
+}
+#toggle {
+  display: none;
+}
+/************HOME*********************/
+
+.Home {
+  display: grid;
+  grid-template-areas:
+    "gc gc"
+    "upper upper"
+    "midleft midright";
+}
+.gc {
+  margin-top: 2.1em;
+  grid-area: gc;
+}
+.try {
+  grid-area: upper;
+}
+.topcollections {
+  grid-area: midright;
+}
+.browse {
+  grid-area: midleft;
+}
+
+.top-button {
+  background: #c4ff33;
+}
+.home-button {
+  background: #c4ff33;
+  height: 100px;
+  width: 206.38px;
+  margin: 50px;
+  border-right: solid black;
+  cursor: pointer;
+}
+/************HOME*********************/
+/******************DETAILS*************/
+.Details {
+  display: grid;
+  grid-template-areas:
+    "ul um ur"
+    "ll des des"
+    "sI sI  sI"
+    "com com com";
+}
+.wrapItems {
+  grid-area: um;
+  background-color: #eee;
+  border: solid black;
+  justify-self: center;
+  align-self: center;
+  height: 510px;
+}
+.itImage {
+  align-self: center;
+  grid-area: ul;
+  height: 505px;
+  width: 305px;
+  background-color: #eee;
+  margin: 10px;
+  border: solid black;
+  justify-self: center;
+}
+.itImage > img {
+  align-self: center;
+  margin: 15px;
+  max-height: 200px;
+  max-width: 300px;
+}
+.genItem {
+  height: 50px;
+  width: 120px;
+  background-color: #c4ff33;
+  margin: 5px;
+  cursor: pointer;
+}
+.colItemDetails {
+  grid-area: ur;
+  border: solid black;
+  height: 510px;
+  max-width: 200ps;
+  margin: 20px;
+  justify-self: center;
+  align-self: center;
+  overflow-y: auto;
+}
+.checked {
+  color: orange;
+}
+.star {
+  /*and comments*/
+  grid-area: ll;
+  background: #eee;
+}
+.des {
+  grid-area: des;
+ 
+}
+.comments {
+  grid-area: com;
+  background: #eee;
+}
+.sI {
+  grid-area: sI;
+  float: left;
+}
+
+#detailsCarousel {
+  max-height: 300px;
+}
+@media screen and (max-width: 660px){
+  .Details{
+    grid-template-areas:
+    'ul'
+    'um'
+    'ur'
+    'll'
+    'des'
+    'sI'
+    'com'
+  }
+  
+  .itImage{
+    margin-top: auto;
+    justify-self: start;
+    max-height: 350px;
+    max-width:300;
+    margin-bottom: auto;
+  }
+
+  .itImage > img {
+    align-self: center;
+    margin: 15px;
+    max-height: 250px;
+    max-width: 200px;
+  }
+  #detailsCarousel {
+    max-height: 200px;
+    max-width: 250px;
+    
+  }
+
+  .wrapItems{
+    margin-top: auto;
+    height: 300px;
+    overflow: auto;
+  }
+  .colItemDetails{
+    justify-self: start;
+    align-self: start;
+    max-width: 290px;
+    overflow-y: auto;
+  }
+  .comments{
+    max-width: 300px;
+    max-height: 400px;
+    overflow-y: auto;
+  }
+  textarea {
+    height: 4em;
+    width: 20em;
+}
+}
+/****************CollectionDETAILS***************/
+/****************SidebarS***************/
+.Sidebar {
+  max-width: 200px;
+  z-index: 1; /* Sit on top */
+  background-color: #eee;
+  font-size: 15px;
+  color: black;
+  border: solid black;
+  overflow: auto;
+}
+.sButtons {
+  background-color: #c4ff33;
+  border-bottom: 2px solid black;
+  border-right: 2px solid black;
+  color: black;
+  padding: 4px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 13px;
+  margin: 5px;
+  cursor: pointer;
+}
+.sButtons:hover {
+  background-color: #85a13e;
+}
+
+.delBtn {
+  background-color: rgb(175, 40, 40);
+  height: 20px;
+  width: 20px;
+  cursor: pointer;
+}
+.delBtn:hover {
+  background-color: rgb(245, 155, 155);
+}
+
+.sbar {
+  display: grid;
+  grid-template-areas: "pushLeft pushRight";
+}
+#left {
+  grid-area: pushLeft;
+}
+#right {
+  grid-area: pushRight;
+  align-self: center;
+}
+/*hamburgermenu*/
+label {
+  font-size: 30px;
+  display: block;
+  cursor: pointer;
+  margin: 10px;
+}
+.innerCont {
+  display: none;
+  z-index: 1; /* Sit on top */
+  position: absolute;
+  right: 10px;
+  top: 93px;
+}
+
+#toggle:checked ~ .innerCont {
+  display: block;
+  z-index: 1; /* Sit on top */
+}
+
+/****************sidebar***************/
+
+/*********SEARCHRESULTS*******************/
+
+.resultContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 10px;
+}
+/****************ITEM*****************/
+.Item {
+  /* height:100px; */
+  grid-template-rows: auto 1fr;
+  grid-template-columns: 1fr 1fr;
+  display: grid;
+  grid-template-areas:
+    "ul ur"
+    "ll ur";
+}
+.itempic {
+  grid-area: ul;
+  min-height: 0;
+  min-width: 0;
+  margin: 5px;
+}
+.itemdesc {
+  grid-area: ur;
+  margin: 5px;
+  text-align: justify;
+}
+.price {
+  grid-area: ll;
+  margin: 5px;
+}
+
+@media screen and (max-width: 660px) {
+  .Item {
+    grid-template-areas:
+      "ur ur"
+      "ul ul"
+      "ll .";
+  }
+}
+
+/***************ITEM******************/
+
+/**************Create****************/
+
+.Create > div {
+  height: 100%;
+}
+
+.Create {
+  height: 100%;
+  margin: 1em;
+  grid-template-rows: 2fr 10fr 5fr;
+  grid-template-columns: 8fr 1fr;
+  display: grid;
+  align-items: center;
+  grid-template-areas:
+    "title title"
+    "items createbtn"
+    "description CreateDescription";
+}
+
+#CreateButton {
+  cursor: pointer;
+}
+
+.CreateName {
+  font-size: 25px;
+}
+
+.CreateName:focus {
+  color: #555555;
+}
+
+.CreateTitle {
+  grid-area: title;
+}
+
+.CreateItems {
+  grid-area: items;
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-areas: "carousel list";
+  grid-template-columns: 2fr 5fr;
+}
+
+.CreateCarousel {
+  grid-area: carousel;
+  width: 90%;
+}
+
+.CreateList {
+  grid-area: list;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  overflow: auto;
+}
+
+.CreateListItem {
+  display: grid;
+  border: solid;
+  border-color: black;
+  margin: 1em;
+  width: 8em;
+  max-height: 8em;
+  align-items: stretch;
+  grid-template-areas:
+    "a"
+    "b";
+  grid-template-columns: auto;
+  grid-template-rows: 6em auto;
+}
+
+.CreateListImgWrap {
+  grid-area: a;
+  max-width: 100%;
+  min-height: 6em;
+  overflow: hidden;
+  position: relative;
+}
+
+.CreateListImgWrap > img {
+  position: absolute;
+  max-width: 110%;
+  min-height: 100%;
+  top: -9999px;
+  left: -9999px;
+  right: -9999px;
+  bottom: -9999px;
+  margin: auto;
+}
+
+.CreateListTxtWrap {
+  height: 100%;
+  font-size: 0.6em;
+  grid-area: b;
+  background-color: lightgrey;
+  overflow: hidden;
+  word-wrap: break-word;
+}
+
+.CreateDetails {
+  grid-area: description;
+  display: flex;
+  flex-direction: column;
+}
+
+.CreateDescription {
+  width: 50%;
+  margin-bottom: 0.5em;
+}
+
+@media screen and (max-width: 660px) {
+  .CreateItems {
+    grid-area: items;
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-areas:
+      "carousel carousel"
+      "list list";
+    grid-template-columns: 2fr 5fr;
+  }
+  .Create {
+    grid-template-areas:
+      "title title"
+      "items items"
+      "list list"
+      "description description"
+      "createbtn createbtn";
+  }
+
+  .CreateDescription {
+    height: 100%;
+    width: 100%;
+  }
+
+  .CreateDetails {
+    overflow: none;
+  }
+
+  .CreateName {
+    font-size: 25px;
+    width: 100%;
+    margin-top: 1em;
+  }
+
+  .CreateDone {
+    margin-top: 1em;
+  }
+
+  .CreateCarousel {
+    width: 100%;
+  }
+
+  .CreateList {
+    width: 100%;
+  }
+
+  .CreateListItem {
+    width: 30%;
+    margin: 0 auto;
+  }
+
+  .genItem {
+    width: 100%;
+  }
+}
+
+.CreateTags {
+  width: 30em;
+}
+
+.CreateDone {
+  grid-area: createbtn;
+  place-self: center;
+}
+
+button.cr {
+  width: 100px;
+  height: 100px;
+}
+
+#rcgItemCount {
+  margin-bottom: 5px;
+}
+
+.buttonRand {
+  font-size: 14px;
+  width: 300px;
+  background-color: #c4ff33;
+  cursor: pointer;
+}
+
+#rcgSelect {
+  cursor: pointer;
+}
+
+/**************Create****************/
+
+@media screen and (max-width: 660px) {
+  #rcgItemCount {
+    width: 100%;
+    height: 2em;
+  }
+
+  .buttonRand {
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 1em;
+    border: black;
+  }
+
+  #rcgSelect {
+    height: 3em;
+    width: 100%;
+    background-color: #c4ff33;
+  }
+
+  .rcgBtnHolder {
+    text-align: center;
+  }
+
+  .rcgHeaderHolder {
+    text-align: center;
+  }
+  .rcgHeaderHolder h2 {
+    margin-top: 2em;
+  }
+
+  .Home {
+    display: grid;
+    grid-template-areas:
+      "gc gc"
+      "upper upper"
+      "midleft midleft"
+      "midright midright";
+  }
+
+  .try {
+    display: flex;
+    justify-content: center;
+  }
+
+  .browse {
+    display: flex;
+    justify-content: center;
+  }
+
+  .searchImg {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .SearchResults ul {
+    width: 70%;
+    margin: auto;
+    margin-top: 2em;
+  }
+}

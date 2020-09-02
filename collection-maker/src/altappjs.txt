@@ -1,0 +1,44 @@
+<BrowserRouter>
+  <div className="App">
+  <Navbar
+    nul={this.nullifyState}
+    state={this.state}
+    initS={this.initSearch}
+    getS={this.getSearchedItem}
+    update={this.updateKeyword}
+    setSearchType={this.setSearchType}
+  />
+    <Switch>
+      <Route
+        exact
+        path="/"
+        render={() => (
+          <div>
+            <Home />
+          </div>
+        )}
+      ></Route>
+
+      <Route exact path="/searchResults"></Route>
+      <Route
+        exact
+        path="/ItemDetails/:itemId"
+        render={() => (
+          <div>
+            <Item />
+          </div>
+        )}
+      ></Route>
+
+      <Route
+        exact
+        path="/create"
+        render={() => (
+          <div>
+            <Create />
+          </div>
+        )}
+      ></Route>
+    </Switch>
+  </div>
+</BrowserRouter>
